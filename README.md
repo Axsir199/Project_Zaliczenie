@@ -1,2 +1,2 @@
 Projekt przedstawia sklep z suplementami. 
-Dominik Wróblewski, Z401, s10651
+Dominik Wróblewski, Z401
