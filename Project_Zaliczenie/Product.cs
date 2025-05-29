@@ -8,12 +8,12 @@ namespace Project_Zaliczenie
 {
     public class Product
     {
-        public int Id { get; set; }              // Unikalny identyfikator
-        public string Name { get; set; }         // Nazwa produktu
-        public decimal Price { get; set; }       // Cena jednostkowa
+        public int Id { get; set; }              // Identyfikator
+        public string Name { get; set; }         // Nazwa
+        public decimal Price { get; set; }       // Cena 
         public int StockQuantity { get; set; }   // Ilość dostępna w magazynie
 
-        // Konstruktor
+ 
         public Product(int id, string name, decimal price, int stockQuantity)
         {
             Id = id;

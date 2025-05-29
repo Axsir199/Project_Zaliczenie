@@ -9,9 +9,8 @@ namespace Project_Zaliczenie
     public class CartItem
     {
         public Product Product { get; set; }   // Produkt w koszyku
-        public int Quantity { get; set; }      // Ilość sztuk
+        public int Quantity { get; set; }      // Ilość
 
-        // Konstruktor
         public CartItem(Product product, int quantity)
         {
             Product = product;

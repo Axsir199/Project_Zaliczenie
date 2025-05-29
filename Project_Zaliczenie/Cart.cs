@@ -25,7 +25,7 @@ namespace Project_Zaliczenie
                 }
                 else
                 {
-                    Console.WriteLine("Nie można dodać więcej niż dostępna ilość.");
+                    Console.WriteLine("Nie mozna dodac wiecej niz dostępna ilosc.");
                 }
             }
             else
@@ -36,7 +36,7 @@ namespace Project_Zaliczenie
                 }
                 else
                 {
-                    Console.WriteLine("Nie można dodać więcej niż dostępna ilość.");
+                    Console.WriteLine("Nie mozna dodac wiecej niz dostępna ilosc.");
                 }
             }
         }
@@ -65,7 +65,7 @@ namespace Project_Zaliczenie
         }
 
 
-        // Wyświetlanie zawartości koszyka
+        // Wyświetlanie koszyka
         public void ShowCart()
         {
             if (items.Count == 0)
@@ -74,12 +74,12 @@ namespace Project_Zaliczenie
             }
             else
             {
-                Console.WriteLine("=== ZAWARTOŚĆ KOSZYKA ===");
+                Console.WriteLine("=== ZAWARTOSC KOSZYKA ===");
                 foreach (var item in items)
                 {
                     Console.WriteLine(item);
                 }
-                Console.WriteLine($"Łączna kwota: {GetTotal():C}");
+                Console.WriteLine($"Kwota calkowita: {GetTotal():C}");
             }
         }
 

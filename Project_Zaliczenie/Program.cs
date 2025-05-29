@@ -6,19 +6,19 @@ class Program
     static void Main(string[] args)
     {
         Store store = new Store();       // Sklep z produktami
-        Cart cart = new Cart();          // Koszyk użytkownika
+        Cart cart = new Cart();          // Koszyk kupca
         bool running = true;
 
         while (running)
         {
             Console.WriteLine("\n=== SKLEP Z SUPLEMENTAMI DIETY ===");
-            Console.WriteLine("1. Wyświetl produkty");
+            Console.WriteLine("\n1. Wyswietl produkty");
             Console.WriteLine("2. Dodaj produkt do koszyka");
-            Console.WriteLine("3. Usuń produkt z koszyka");
-            Console.WriteLine("4. Pokaż koszyk");
+            Console.WriteLine("3. Usun produkt z koszyka");
+            Console.WriteLine("4. Pokaz koszyk");
             Console.WriteLine("5. Finalizuj zakup");
-            Console.WriteLine("0. Wyjdź");
-            Console.Write("Wybierz opcję: ");
+            Console.WriteLine("0. Wyjdz");
+            Console.Write("\nWybierz opcje: ");
 
             string input = Console.ReadLine();
             Console.WriteLine();
@@ -36,14 +36,14 @@ class Program
                         Product productToAdd = store.GetProductById(addId);
                         if (productToAdd != null)
                         {
-                            Console.Write("Podaj ilość: ");
+                            Console.Write("Podaj ilosc: ");
                             if (int.TryParse(Console.ReadLine(), out int quantity))
                             {
                                 cart.AddProduct(productToAdd, quantity);
                             }
                             else
                             {
-                                Console.WriteLine("Nieprawidłowa ilość.");
+                                Console.WriteLine("Nieprawidlowa ilosc.");
                             }
                         }
                         else
@@ -53,19 +53,19 @@ class Program
                     }
                     else
                     {
-                        Console.WriteLine("Nieprawidłowy ID.");
+                        Console.WriteLine("Nieprawidlowy ID.");
                     }
                     break;
 
                 case "3":
-                    Console.Write("Podaj ID produktu do usunięcia: ");
+                    Console.Write("Podaj ID produktu do usuniecia: ");
                     if (int.TryParse(Console.ReadLine(), out int removeId))
                     {
                         cart.RemoveProduct(removeId);
                     }
                     else
                     {
-                        Console.WriteLine("Nieprawidłowy ID.");
+                        Console.WriteLine("Nieprawidlowy ID.");
                     }
                     break;
 
@@ -78,7 +78,7 @@ class Program
                     cart.ShowCart();
                     store.UpdateStock(cart.GetItems());
                     cart.Clear();
-                    Console.WriteLine("Dziękujemy za zakupy!");
+                    Console.WriteLine("Dziekujemy za zakupy!");
                     break;
 
                 case "0":
@@ -87,7 +87,7 @@ class Program
                     break;
 
                 default:
-                    Console.WriteLine("Nieznana opcja. Spróbuj ponownie.");
+                    Console.WriteLine("Nieznana opcja. Sprobuj ponownie.");
                     break;
             }
         }
